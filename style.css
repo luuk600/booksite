@@ -1,0 +1,427 @@
+:root {
+    --base-color: #efeaea;
+    --box-color: #fff;
+    --text-color: #000;
+    --active-color: #ff8000;
+    --primary-color: #b6b6b6;
+    --button-color: #393939;
+}
+
+.darkMode {
+    --box-color: #393939;
+    --base-color: #000000;
+    --text-color: #ffffff;
+    --active-color: #ff8000;
+    --primary-color: #676767;
+    --button-color: #ffffff;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    transition: ease 0.5s;
+    color: var(--active-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#active {
+    color: var(--active-color);
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--base-color);
+    overflow: hidden;
+}
+
+#container {
+    transition: ease 1s;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 11vh 4fr;
+    grid-template-areas:
+    "header header header"
+    "main main main";
+    width: 100vw;
+}
+
+#navbar {
+    align-content: center;
+    background-color: var(--box-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    grid-area: header;
+    justify-content: center;
+    margin: 2vh 2vw 2vh 2vw;
+    max-height: 7vh;
+    max-width: 96vw;
+    min-height: 7vh;
+    min-width: 96vw;
+    transition: ease 1s;
+}
+
+.roundButton {
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: var(--base-color);
+    border: 0;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+    align-self: center;
+    margin: 10px;
+    padding: 0;
+    transition: ease 1s;
+}
+
+#light-darkMode svg {
+    fill: var(--button-color);
+}
+
+#light-darkMode svg:last-child {
+    transition: ease 1s;
+    display: none;
+}
+
+.darkMode #light-darkMode svg:first-child {
+    transition: ease 1s;
+    display: none;
+}
+
+.darkMode #light-darkMode svg:last-child {
+    transition: ease 1s;
+    display: block;
+}
+
+
+
+#home {
+    padding: 20px;
+    transition: ease 1s;
+    display: grid;
+    grid-template-columns:3fr 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "discover . our-team";
+    grid-area: main;
+    overflow-x: auto;
+    margin: 2vh 2vw 2vh 2vw;
+    color: var(--text-color);
+    align-content: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+#reviewback{
+    background-color: var(--base-color);
+}
+#navOptions {
+    flex-grow: 1;
+    flex-shrink: 1;
+    transition: ease 1s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3vh;
+    color: var(--text-color);
+    font-weight: bold;
+    text-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+#button {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#uploadphoto{
+
+    background-color: var(--box-color);
+    width: 100%;
+    height: 100%;
+    grid-area: discover;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 5%;
+    justify-items: center;
+    font-size: 250%;
+}
+#uploadphotobttn{
+    margin-top: 30%;
+    width: 110%;
+    height: 80px;
+    border-radius: 30px;
+    background-color: #5278FF;
+    font-size: 150%;
+    border: none;
+}
+#photoReturn{
+    width: 80%;
+    height: 60%;
+    background-color: green;
+    margin-bottom: 3%;
+    border-radius: 30px;
+}
+#bttnAgainandSave{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+#bttnAgainandSave button{
+    width: 300px;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #5278FF;
+    font-size: 150%;
+    border: none;
+}
+#discover {
+
+    background-color: var(--box-color);
+    width: 100%;
+    height: 100%;
+    grid-area: discover;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 5%;
+    justify-items: center;
+    font-size: 300%;
+}
+#ourTeam{
+    overflow: hidden;
+    background-color: var(--box-color);
+    width: 100%;
+    height: 82vh;
+    grid-area: our-team;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    font-size: 300%;
+    padding: 5%;
+    justify-items: center;
+}
+#team{
+    overflow: scroll;
+    height: 64vh;
+}
+#booksDisc{
+    width: 100%;
+    height: 85%;
+    border-radius: 30px;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9%;
+    overflow: scroll;
+}
+.discoverBooks{
+    padding: 5%;
+    display: flex;
+    width: 45%;
+    height: 60%;
+    background-color: var(--box-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: space-between;
+    font-size: 45%;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.discoverBooks:hover{
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+    width: 46%;
+    height: 61%;
+}
+
+.discoverBooks p{
+    font-size: 200%;
+}
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+#book1{
+    background-image: url("book1.jpg");
+}
+#book2{
+    background-image: url("book2.jpg");
+}
+#book3{
+    background-image: url("book3.webp");
+}
+#book4{
+    background-image: url("book4.jpg");
+}
+#book5{
+    background-image: url("book5.jpg");
+}
+#book6{
+    background-image: url("book6.webp");
+}
+
+#review{
+    padding: 5%;
+    transition: ease all 1s;
+    grid-area: main;
+    margin: 2vh 2vw 2vh 2vw;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: var(--box-color);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+#reviewText{
+    text-align: left;
+    font-size: 350%;
+}
+#buttonsreview{
+
+    margin-left: 60%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+#buttonsreview button{
+    width: 400px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #5278FF;
+    font-size: 150%;
+    border: none;
+}
+
+#chat-notes{
+    padding: 2%;
+    transition: ease all 1s;
+    grid-area: main;
+    margin: 2vh 2vw 2vh 2vw;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    font-size: 150%;
+    flex-direction: row;
+}
+#chatchoose{
+    justify-items: center;
+    padding: 2%;
+    width: 20%;
+    height: 100%;
+    background-color: var(--box-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#chatchoose li{
+    font-size: 110%;
+}
+#chat{
+    padding: 3%;
+    margin-left: 10%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--box-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#chat h1{
+    font-size: 400%;
+}
+#chat p{
+    font-size: 130%;
+}
+#typehere{
+    margin-top: 5%;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #5278FF;
+    font-size: 150%;
+    border: none;
+}
+
+#buttonAddChat{
+    margin-top: 20%;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #5278FF;
+    font-size: 150%;
+    border: none;
+}
+#chat-delete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#chat-delete button{
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #5278FF;
+    font-size: 150%;
+    border: none;
+ }
+#notebooks{
+    justify-items: center;
+    padding: 2%;
+    width: 20%;
+    height: 100%;
+    background-color: var(--box-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#notes{
+
+    padding: 3%;
+    margin-left: 10%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--box-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#notes h1{
+    font-size: 400%;
+}
+#notes p{
+    font-size: 130%;
+}
+
+#notebooks li{
+    font-size: 110%;
+}

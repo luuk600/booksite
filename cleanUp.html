@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <title>BoekenReview</title>
+    <link href="style.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div id="navbar">
+        <div class="anton-regular" id="navOptions">
+            <a href="index.html">HOME</a>
+            <a href="review.html">Review</a>
+            <a href="chat.html">Chat</a>
+            <a href="cleanUp.html" id="active">CleanUp</a>
+            <a href="Notes.html">Notes</a>
+        </div>
+        <button aria-label="switch to dark mode" class="roundButton" id="light-darkMode">
+            <svg fill="#e8eaed" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
+                <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+            </svg>
+            <svg fill="#e8eaed" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
+                <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div id="home">
+        <div id="uploadphoto">
+            <h1>Upload your photo</h1>
+            <p>upload your photo and we will make
+                your shelfs look fresh.<br>
+                when you upload your file it gets
+                send to us and our computer will
+                make a layout of how you should
+                put your books.<br><br>
+
+                version 2.1.0<br><br>
+
+                servers are (up)<br><br>
+
+                maximum of 200 books
+            </p>
+            <button id="uploadphotobttn">Upload photo</button>
+
+
+
+        </div>
+        <div id="ourTeam">
+            <h1>Your Photo</h1>
+            <div id="photoReturn"></div>
+            <div id="bttnAgainandSave">
+                <button>Again</button>
+                <button>Save</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
